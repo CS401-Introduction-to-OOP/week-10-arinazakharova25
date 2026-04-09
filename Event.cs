@@ -4,10 +4,10 @@ public class Event
 {
     public int NumberTurn { get; set; }
     public string Description { get; set; }
-    public string EventType { get; set; }
+    public EventType EventType { get; set; }
     public string Change { get; set; }
 
-    public Event(int numberTurn, string description, string eventType, string change)
+    public Event(int numberTurn, string description, EventType eventType, string change)
     {
         NumberTurn = numberTurn;
         Description = description;
