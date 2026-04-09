@@ -5,9 +5,9 @@ public class Event
     public int NumberTurn { get; set; }
     public string Description { get; set; }
     public EventType EventType { get; set; }
-    public string Change { get; set; }
+    public int Change { get; set; }
 
-    public Event(int numberTurn, string description, EventType eventType, string change)
+    public Event(int numberTurn, string description, EventType eventType, int change)
     {
         NumberTurn = numberTurn;
         Description = description;

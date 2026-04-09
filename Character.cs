@@ -5,17 +5,18 @@ public class Character
     public string Name { get; set; }
     public string Role { get; set; }
     public int Level { get; set; }
+    public int MaxHealth { get; set; }
     public int  Health { get; set; }
     
-    public int MaxHealth { get; set; }
     public int Gold { get; set; }
     public StatusCharacter Status { get; set; }
 
-    public Character(string name, string role, int level, int health, int gold, StatusCharacter status)
+    public Character(string name, string role, int level, int health, int maxHealth, int gold, StatusCharacter status)
     {
         Name = name;
         Role = role;
         Level = level;
+        MaxHealth = maxHealth;
         Health = health;
         Gold = gold;
         Status = status;
@@ -40,7 +41,7 @@ public class Character
     {
         return $"{Name} ({Role}) " +
                $" Level: {Level} " +
-               $" Health: {Health} " +
+               $" Health: {Health}/{MaxHealth} " +
                $" Gold: {Gold} " +
                $" Status: {Status}";
     }
